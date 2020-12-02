@@ -51,7 +51,6 @@ log_manger::log_manger(const std::string& log_path):
     mkdirs(log_path, 0766);
 
     _open_file();
-//    m_fs_error.open(m_log_path + "error" + t + ".log", ios::app | ios::in | ios::out);
 }
 log_manger::~log_manger()
 {

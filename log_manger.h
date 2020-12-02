@@ -69,7 +69,7 @@ inline void bm_write_log(const char* curr_file_name, const char* curr_func_name,
     s_log_manger._write(curr_file_name, curr_func_name, line_num);
     s_log_manger._write(leval);
 }
-#define LOG(info) bm_write_log(__FILE__, __FUNCTION__, __LINE__, info);\
+#define MLOG(info) bm_write_log(__FILE__, __FUNCTION__, __LINE__, info);\
     s_log_manger.stream()
 
 #endif
