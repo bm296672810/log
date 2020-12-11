@@ -35,7 +35,7 @@ std::vector<std::string> split(const std::string& str, const std::string& sp)
 }
 void mkdirs(const std::string& path, mode_t mode)
 {
-    std::vector<std::string> paths = split(path, "/");
+    std::vector<std::string> paths = bm::split(path, "/");
 
     std::string dir;
     for(auto i : paths)
