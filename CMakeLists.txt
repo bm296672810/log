@@ -22,8 +22,8 @@ cmake_minimum_required(VERSION 3.5.1)
 project(log C CXX)
 
 add_library(log log_manger.cpp)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++11")
+# fPIC relocation R_X86_64_32 against `.rodata' can not be used when making a shared object
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -pthread -std=c++11")
 add_executable(log_unit_test log_unit_test.cpp)
 target_link_directories(log_unit_test
 PRIVATE
