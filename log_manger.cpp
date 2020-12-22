@@ -79,16 +79,22 @@ void log_manger::_flush()
 void log_manger::_write(log_leval leval)
 {
     lock_guard_mutex lock(m_lock);
+    if(!m_fs_info.is_open())
+        return;
     m_fs_info << get_log_leval_string(leval) << ":";
 }
 void log_manger::_write(const std::string& content)
 {
     lock_guard_mutex lock(m_lock);
+    if(!m_fs_info.is_open())
+        return;
     m_fs_info << content;
 }
 void log_manger::_write(const char* curr_file_name, const char* curr_func_name, int line_num)
 {
     lock_guard_mutex lock(m_lock);
+    if(!m_fs_info.is_open())
+        return;
     m_fs_info << curr_file_name << "##" << curr_func_name << "##" << line_num;
     m_fs_info << get_current_time();
 }
