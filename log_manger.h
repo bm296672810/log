@@ -58,7 +58,7 @@ private:
 };
 
 
-static log_manger s_log_manger("log/today");
+extern log_manger s_log_manger;
 }
 
 using namespace bm;
