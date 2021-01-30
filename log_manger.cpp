@@ -129,7 +129,7 @@ std::string log_manger::get_current_time()
     local = localtime(&t);
 
     char d[100] = {0};
-    printf(d, "[%d-%d-%d %d:%d:%d]",
+    sprintf(d, "[%d-%d-%d %d:%d:%d]",
            local->tm_year + 1900, local->tm_mon + 1, local->tm_mday,
            local->tm_hour, local->tm_min, local->tm_sec);
 
