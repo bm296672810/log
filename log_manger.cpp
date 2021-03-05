@@ -2,10 +2,10 @@
 #include <iostream>
 #include <sstream>
 
-#ifdef __linux
+#ifdef _WIN32_
+#else
 #include <sys/stat.h>
 #include <sys/time.h>
-#elif __WIN32
 
 #endif
 

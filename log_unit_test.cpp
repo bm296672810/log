@@ -5,7 +5,10 @@
 #include <atomic>
 
 using namespace std;
-
+namespace bm
+{
+log_manger s_log_manger;
+}
 int main()
 {
     long long a = 1;
